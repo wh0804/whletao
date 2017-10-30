@@ -12,7 +12,7 @@
 	
 <div class="lt_aside">
 	<div class="brand">
-		<a href="javascript:;">王皓14期</a>
+		<a href="index.html">王皓14期</a>
 	</div>
 	<div class="user">
 		<img src="images/default.jpg" alt="">
@@ -21,7 +21,7 @@
 	<div class="nav">
 		<ul>
 			<li>
-				<a class="now" href="user.html">
+				<a href="user.html">
 				<span class="glyphicon glyphicon-user"></span>
 				用户管理
 				</a>
@@ -43,9 +43,44 @@
 		</ul>
 	</div>
 </div>
-<div class="lt_main"></div>
+<div class="lt_main">
+	<div class="lt_header">
+		<a href="javascript:;" class="pull-left icon_menu">
+			<span class="glyphicon glyphicon-align-justify"></span>
+		</a>
+		<a href="javascript:;" class="pull-right icon_logout">
+			<span class="glyphicon glyphicon-log-out"></span>
+		</a>
+	</div>
 
+	<div class="container-fluid">
+		<ol class="breadcrumb">
+  			<li><a href="#">管理系统</a></li>
+ 			<li class="active">首页</li>
+		</ol>
 
+		<!-- 内容区域 -->
+		<div class=""></div>
+	</div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="logoutModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span> 你是否确定要退出后台管理系统吗？</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn_logout btn btn-primary">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
 	<script src="lib/jquery/jquery.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.js"></script>
 	<script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
