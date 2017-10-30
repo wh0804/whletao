@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>自己的乐淘管理系统首页</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
 	<link rel="stylesheet" href="lib/nprogress/nprogress.css">
@@ -60,7 +61,25 @@
 		</ol>
 
 		<!-- 内容区域 -->
-		<div class=""></div>
+		<div class="let_content">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<td width="10%">序号</td>
+						<td width="30%">用户网</td>
+						<td width="30%">手机号</td>
+						<td width="20%">状态</td>
+						<td width="10%">操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- 模板引擎 -->
+				</tbody>
+			</table>
+			<div class="pull-right">
+			<ul id="pagintor"></ul>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -81,11 +100,31 @@
     </div>
   </div>
 </div>
+<script type="text/html" id="tpl">
+{{each rows v i}}
+	<tr>
+		<td>{{(page-1)*size+i+1}}</td>
+		<td>{{v.username}}</td>
+		<td>{{v.mobile}}</td>
+		<td>{{v.isDelete===1?"正常":"禁用"}}</td>
+		<td>
+		{{if v.isDelete===1}}
+			<button class="btn btn-danger btn-sm">禁用</button>
+		{{/if}}
+		{{if v. isDelete===0}}
+			<button class="btn btn-sm btn-success">启用</button>
+		{{/if}}
+		</td>
+	</tr>
+	{{/each}}
+</script>
 	<script src="lib/jquery/jquery.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.js"></script>
 	<script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+	<script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
 	<script src="lib/nprogress/nprogress.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
 	<script src="js/common.js"></script>
-	<script src="js/index.js"></script>
+	<script src="js/user.js"></script>
 </body>
 </html>
