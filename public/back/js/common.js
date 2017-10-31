@@ -36,6 +36,7 @@ $(".child").prev().on("click",function(){
 $(".icon_menu").on("click",function(){
 	$(".lt_aside").toggleClass("now");
 	$(".lt_main").toggleClass("now");
+	$(".lt_header").toggleClass("now");
 })
 
 // 公用的推出功能
