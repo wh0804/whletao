@@ -61,7 +61,7 @@ $(function(){
 	$("#fileupload").fileupload({
 		dataType:"json",
 		done:function(e,data){
-			// 获取文件上传结果
+			// 获取文件 上传结果
 			// console.log(data);
 			$(".img_box img").attr("src",data.result.picAddr);
 
@@ -131,4 +131,4 @@ $(function(){
 			}
 		})
 	})
-})
+}) 
